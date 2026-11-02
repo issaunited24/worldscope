@@ -1,4 +1,4 @@
-const CACHE='worldscope-shell-v1';
+const CACHE='worldscope-shell-v2';
 const SHELL=['./','./index.html','./styles.css','./app.js','./places.js','./assets/icon.svg','./manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('worldscope-')&&key!==CACHE).map(key=>caches.delete(key))))));
