@@ -1,0 +1,22 @@
+{
+  "countries": {
+    "provider": "Natural Earth",
+    "dataset": "Admin 0 countries, 1:110 million",
+    "source": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson",
+    "license": "Public domain",
+    "notes": "Geometry retained; properties reduced to English name, ISO_A3_EH with ADM0_A3 fallback, and label coordinates. Approximate boundaries, not an authoritative statement of sovereignty. Small countries may be omitted."
+  },
+  "earth": {
+    "provider": "Natural Earth, distributed with CesiumJS 1.124.0",
+    "source": "https://cdn.jsdelivr.net/npm/cesium@1.124.0/Build/Cesium/Assets/Textures/NaturalEarthII/",
+    "license": "Public domain",
+    "notes": "Original overview tiles at levels 0–2; not live satellite imagery."
+  },
+  "statistics": {
+    "endpoint": "https://api.worldbank.org/v2/country/all/indicator/",
+    "dataset": "World Development Indicators (source 2)",
+    "indicators": {"population": "SP.POP.TOTL", "gdp_current_usd": "NY.GDP.MKTP.CD", "military_expenditure_current_usd": "MS.MIL.XPND.CD"},
+    "military_original_provider": "SIPRI",
+    "notes": "Fetched at runtime. Current calendar year and previous five years queried. Default is newest year with at least 80 mapped countries reporting. Never substitutes a different year for a missing country. Rankings cover mapped countries with figures only. Cached data carries its original retrieval timestamp. Provider metadata contains its last update date."
+  }
+}
